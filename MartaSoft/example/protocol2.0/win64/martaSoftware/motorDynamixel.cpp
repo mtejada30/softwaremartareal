@@ -41,7 +41,8 @@
 #define PROTOCOL_VERSION                2.0                 // See which protocol version is used in the Dynamixel
 
 // Default setting
-#define BAUDRATE                        1000000
+//#define BAUDRATE                        1000000
+#define BAUDRATE                        57600
 
 #define DXL_MOVING_STATUS_THRESHOLD     20                  // Dynamixel moving status threshold
 

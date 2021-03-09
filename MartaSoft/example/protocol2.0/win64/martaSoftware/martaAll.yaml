@@ -1,0 +1,37 @@
+NAME:Marta
+SENSOR:
+    PORT:COM1
+    NAME:IMU_FRONT
+SENSOR:
+    PORT:COM2
+    NAME:IMU_BACK
+MOTOR:
+    PORT:COM4
+    LEFT_ARM:
+        3:LeftShoulderPitch:0:1588:275
+        4:LeftShoulderRoll:1620:3624:3528
+        19:LeftElbowPitch:820:2147:1552
+    RIGHT_ARM:
+        6:RightShoulderPitch:2185:3970:3466
+        7:RightShoulderRoll:37:2004:1907
+        8:RightElbowPitch:2170:3593:2652
+    HIP:
+        16:HipPitch:1581:2146:1844
+        17:HipRoll:695:1277:967
+        18:HipYaw:1575:2607:2023
+    LEFT_LEG:
+        9:LeftLegYaw:976:2063:1482
+        10:LeftPelvisPitch:1787:2835:2209
+        11:LeftPelvisRoll:2625:3092:2841
+        12:LeftKneePitch:775:1740:1683
+        13:LeftAnkleRoll:1818:2313:2050
+        14:LeftAnklePitch:1689:2328:1997
+        15:LeftFingersPitch:1376:2241:1899
+    RIGHT_LEG:
+        5:RightLegYaw:1584:2644:2054
+        20:RightPelvisPitch:1540:2906:2047
+        21:RightPelvisRoll:1844:2584:2040
+        22:RightKneePitch:1337:2056:1984
+        23:RightAnkleRoll:1871:2321:2066
+        24:RightAnklePitch:1699:2344:2034
+        25:RightFingersPitch:1591:2265:2023

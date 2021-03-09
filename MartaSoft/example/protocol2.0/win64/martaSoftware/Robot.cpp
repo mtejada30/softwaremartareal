@@ -12,7 +12,9 @@ Robot::Robot(std::string file) {
 	std::map<int, std::vector<std::string> >::iterator it;
 	std::map<int, std::vector<int> >::iterator itRange;
 	std::vector<int> IDxErase;
+
 	for (it = robotMotors.begin(); it != robotMotors.end(); ++it) {
+		std::cout << it->first << " " << it->second[0] << std::endl;
 		if (ping(it->first, it->second[0]) == -1) {
 			IDxErase.push_back(it->first);
 		}
@@ -27,12 +29,13 @@ Robot::Robot(std::string file) {
 	}
 
 	std::cout << "Motor Initialize \n";
+	
 	for (itRange = motorRange.begin(); itRange != motorRange.end(); ++itRange) {
 		std::cout << itRange->first << "\t " << itRange->second[2] << std::endl;
 		set_position(itRange->first, robotMotors[itRange->first][0], itRange->second[2]);
 		std::this_thread::sleep_for(std::chrono::milliseconds(TIME_SLEEP));
 	}
-
+	
 	startTime = std::chrono::high_resolution_clock::now();
 	
 }
@@ -107,7 +110,8 @@ bool Robot::readFileConfig(std::string filename) {
 			
 			while (seglist.size() > 1) {
 				int DXL_ID = std::stoi(seglist[0]);		// ID MOTOR
-				
+				std::cout << DXL_ID << " lendo " << std::endl;
+
 				int pos_min = std::stoi(seglist[2]);
 				int pos_max = std::stoi(seglist[3]);
 				int pos		= std::stoi(seglist[4]);

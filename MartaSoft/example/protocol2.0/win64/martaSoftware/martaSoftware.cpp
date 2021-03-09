@@ -59,14 +59,13 @@ std::vector<int> MOVE_POS = { 0, 2000, 0 };
 
 int main()
 {	
-	Robot Marta("marta.yaml");
+	Robot Marta("martaAll.yaml");
 	std::vector<int> IDs = { 1, 2, 3, 4 };
 	std::vector<int> pos1 = { 1000, 1000, 500, 500};
 	std::vector<int> pos2 = { 0, 0, 0, 0};
-	Marta.writeFile("TestWrite.txt");
 
 	bool aux = true;
-	Marta.readFileMove("read1.txt");
+	Marta.readFileMove("initParts.txt");
 	/*
 	do{
 		aux = Marta.moveMotors(IDs, pos1);
