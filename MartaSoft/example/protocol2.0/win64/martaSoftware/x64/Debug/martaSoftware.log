@@ -1,0 +1,2 @@
+﻿  motorDynamixel.cpp
+c:\users\vitor\desktop\softwaremartareal\martasoft\example\protocol2.0\win64\martasoftware\motordynamixel.cpp(16): fatal error C1083: Não é possível abrir arquivo incluir: 'dynamixel_sdk.h': No such file or directory

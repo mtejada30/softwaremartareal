@@ -1,0 +1,17 @@
+NAME:Marta
+SENSOR:
+    PORT:COM1
+    NAME:IMU_FRONT
+SENSOR:
+    PORT:COM2
+    NAME:IMU_BACK
+MOTOR:
+    PORT:COM5
+    HEAD:
+        1:HeadPitch:0:1024:1000
+        2:NeckYaw:0:1024:500
+    RIGHT_ARM:
+        3:RightShoulderPitch:0:500:0
+    RIGHT_LEG:
+        4:RightKneePitch:0:1050:500
+        5:RightAnklePitch:0:1024:1000

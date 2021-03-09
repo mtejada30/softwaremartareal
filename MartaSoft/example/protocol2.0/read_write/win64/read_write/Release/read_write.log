@@ -1,0 +1,178 @@
+﻿  read_write.cpp
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(43): warning C4251: 'dynamixel::GroupBulkRead::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkRead'
+          with
+          [
+              _Ty=uint8_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\packet_handler.h(205): note: consulte a declaração de 'std::vector<uint8_t,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=uint8_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(44): warning C4251: 'dynamixel::GroupBulkRead::address_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkRead'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(44): note: consulte a declaração de 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(45): warning C4251: 'dynamixel::GroupBulkRead::length_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkRead'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(44): note: consulte a declaração de 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(46): warning C4251: 'dynamixel::GroupBulkRead::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkRead'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(46): note: consulte a declaração de 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(47): warning C4251: 'dynamixel::GroupBulkRead::error_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkRead'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(46): note: consulte a declaração de 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_write.h(43): warning C4251: 'dynamixel::GroupBulkWrite::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkWrite'
+          with
+          [
+              _Ty=uint8_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\packet_handler.h(205): note: consulte a declaração de 'std::vector<uint8_t,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=uint8_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_write.h(44): warning C4251: 'dynamixel::GroupBulkWrite::address_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkWrite'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(44): note: consulte a declaração de 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_write.h(45): warning C4251: 'dynamixel::GroupBulkWrite::length_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkWrite'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(44): note: consulte a declaração de 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint16_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_write.h(46): warning C4251: 'dynamixel::GroupBulkWrite::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupBulkWrite'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(46): note: consulte a declaração de 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_sync_read.h(43): warning C4251: 'dynamixel::GroupSyncRead::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupSyncRead'
+          with
+          [
+              _Ty=uint8_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\packet_handler.h(205): note: consulte a declaração de 'std::vector<uint8_t,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=uint8_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_sync_read.h(44): warning C4251: 'dynamixel::GroupSyncRead::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupSyncRead'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(46): note: consulte a declaração de 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_sync_read.h(45): warning C4251: 'dynamixel::GroupSyncRead::error_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupSyncRead'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(46): note: consulte a declaração de 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_sync_write.h(43): warning C4251: 'dynamixel::GroupSyncWrite::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupSyncWrite'
+          with
+          [
+              _Ty=uint8_t
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\packet_handler.h(205): note: consulte a declaração de 'std::vector<uint8_t,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=uint8_t
+          ]
+c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_sync_write.h(44): warning C4251: 'dynamixel::GroupSyncWrite::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' precisa ter dll-interface para ser usado por clientes de class 'dynamixel::GroupSyncWrite'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+  c:\users\vitor\desktop\martasoft\include\dynamixel_sdk\group_bulk_read.h(46): note: consulte a declaração de 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=uint8_t,
+              _Ty=uint8_t *
+          ]
+c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(64): warning C4273: 'getch': vínculo de dll inconsistente
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: consulte a definição anterior de 'getch'
+c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(81): warning C4273: 'kbhit': vínculo de dll inconsistente
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(459): note: consulte a definição anterior de 'kbhit'
+c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(139): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(63): note: consulte a declaração de 'getch'
+c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(152): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(63): note: consulte a declaração de 'getch'
+c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(176): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\users\vitor\desktop\martasoft\example\protocol2.0\read_write\read_write.cpp(63): note: consulte a declaração de 'getch'
+     Criando biblioteca C:\Users\vitor\Desktop\MartaSoft\example\protocol2.0\read_write\win64\Release\read_write.lib e objeto C:\Users\vitor\Desktop\MartaSoft\example\protocol2.0\read_write\win64\Release\read_write.exp
+  Gerando código
+  1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finalizada a geração de código
+  read_write.vcxproj -> C:\Users\vitor\Desktop\MartaSoft\example\protocol2.0\read_write\win64\Release\read_write.exe
