@@ -60,24 +60,28 @@ std::vector<int> MOVE_POS = { 0, 2000, 0 };
 int main()
 {	
 	Robot Marta("martaAll.yaml");
+	//Robot Marta("marta.yaml");
 	std::vector<int> IDs = { 1, 2, 3, 4 };
-	std::vector<int> pos1 = { 1000, 1000, 500, 500};
+	std::vector<int> pos1 = { 2000, 2000, 2000, 2000};
 	std::vector<int> pos2 = { 0, 0, 0, 0};
 
 	bool aux = true;
 	Marta.readFileMove("initParts.txt");
+	//Marta.readFileMove2("initParts.txt");
+	//aux = Marta.moveMotors2(IDs, pos1, "martaIntervals.txt");
+	//aux = Marta.moveMotors2(IDs, pos2, "martaIntervals.txt");
 	/*
 	do{
 		aux = Marta.moveMotors(IDs, pos1);
-		std::cout << "WHAT " << aux << std::endl;
-		Marta.writeFile("TestWrite.txt");
+		//std::cout << "WHAT " << aux << std::endl;
+		//Marta.writeFile("TestWrite.txt");
 	} while (aux);
 	
 	
 	do {
-		std::cout << "WHAT1 " << aux << std::endl;
+		//std::cout << "WHAT1 " << aux << std::endl;
 		aux = Marta.moveMotors(IDs, pos2);
-		Marta.writeFile("TestWrite.txt");
+		//Marta.writeFile("TestWrite.txt");
 	} while (aux);
 	*/
 	/*

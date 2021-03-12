@@ -29,13 +29,13 @@ Robot::Robot(std::string file) {
 	}
 
 	std::cout << "Motor Initialize \n";
-	
+	/*
 	for (itRange = motorRange.begin(); itRange != motorRange.end(); ++itRange) {
 		std::cout << itRange->first << "\t " << itRange->second[2] << std::endl;
 		set_position(itRange->first, robotMotors[itRange->first][0], itRange->second[2]);
 		std::this_thread::sleep_for(std::chrono::milliseconds(TIME_SLEEP));
 	}
-	
+	*/
 	startTime = std::chrono::high_resolution_clock::now();
 	
 }
@@ -179,6 +179,33 @@ bool Robot::writeFile(std::string fileee) {
 
 }
 
+std::vector<int> Robot::splitIntervals(int ini, int end) {
+	std::vector<int> auxvec;
+	int aux;
+	if (end > ini) {
+		aux = ini + INTERVAL_THRESHOLD;
+
+		while (aux < end) {
+			auxvec.push_back(aux);
+			//std::cout << aux << " ";
+			aux += INTERVAL_THRESHOLD;
+		}
+	}
+	else {
+		aux = ini - INTERVAL_THRESHOLD;
+
+		while (aux > end) {
+			auxvec.push_back(aux);
+			//std::cout << aux << " ";
+			aux -= INTERVAL_THRESHOLD;
+		}
+	}
+
+	auxvec.push_back(end);
+	//std::cout << end << "\n";
+	return auxvec;
+}
+
 bool Robot::moveMotors(std::vector<int> vecId, std::vector<int> vecPos) {
 	if (vecId.size() != vecPos.size())
 		return true;
@@ -192,6 +219,7 @@ bool Robot::moveMotors(std::vector<int> vecId, std::vector<int> vecPos) {
 			if (vecPos[i] > motorRange[vecId[i]][1]) {
 				vecPos[i] = motorRange[vecId[i]][1];
 			}
+
 			set_position(vecId[i], robotMotors[vecId[i]][0], vecPos[i]);
 
 			resultant = resultant || (abs(vecPos[i] - get_present_position(vecId[i], robotMotors[vecId[i]][0])) > THRESHOLD);
@@ -209,10 +237,49 @@ bool Robot::moveMotors(std::vector<int> vecId, std::vector<int> vecPos) {
 	return resultant;
 }
 
+bool Robot::moveMotors2(std::vector<int> vecId, std::vector<int> vecPos, std::string fileName) {
+	if (vecId.size() != vecPos.size())
+		return true;
+
+	std::vector<std::vector<int> > aux;
+	bool resultant = false;
+	int max = 0;
+	for (int i = 0; i < vecId.size(); i++) {
+		if (robotMotors.count(vecId[i])) {
+			if (vecPos[i] < motorRange[vecId[i]][0]) {
+				vecPos[i] = motorRange[vecId[i]][0];
+			}
+			if (vecPos[i] > motorRange[vecId[i]][1]) {
+				vecPos[i] = motorRange[vecId[i]][1];
+			}
+
+			std::vector<int> auxAux = splitIntervals(get_present_position(vecId[i], robotMotors[vecId[i]][0]), vecPos[i]);
+			aux.push_back(auxAux);
+			if (auxAux.size() > max)
+				max = auxAux.size();
+		}
+	}
+
+	for(int j = 0; j < max; j++){
+		for (int i = 0; i < vecId.size(); i++) {
+			if (j < aux[i].size()) {
+				//std::cout << vecId[i] << ", " << aux[i][j] << " ";
+				set_position(vecId[i], robotMotors[vecId[i]][0], aux[i][j]);
+				writeFile(fileName);
+			}
+
+		}
+		//std::cout << std::endl;
+	}
+	
+	return resultant;
+}
+
+
 bool Robot::readFileMove(std::string filename) {
 	std::string line;
 	std::string segment;
-	std::string fileWrite = "Write_" + filename;
+	std::string fileWrite = "Data_notInterval_" + filename;
 	std::vector<std::string> seglist;
 	std::vector<std::string> seglistAux;
 
@@ -245,23 +312,54 @@ bool Robot::readFileMove(std::string filename) {
 
 		vecIDs.clear();
 		vecPos.clear();
-			/*
-			if (robotMotors.count(DXL_ID)) {
-				if (pos < motorRange[DXL_ID][0]) {
-					pos = motorRange[DXL_ID][0];
-				}
-				if (pos > motorRange[DXL_ID][1]) {
-					pos = motorRange[DXL_ID][1];
-				}
-				set_position(DXL_ID, robotMotors[DXL_ID][0], pos);
-
-				resultant = resultant && (abs(pos - get_present_position(DXL_ID, robotMotors[DXL_ID][0])) > 15);
-			}*/
-
-		
+			
 	}
 
 	fileMove.close();
 	return true;
 }
+
+
+bool Robot::readFileMove2(std::string filename) {
+	std::string line;
+	std::string segment;
+	std::string fileWrite = "Data_75c_" + filename;
+	std::vector<std::string> seglist;
+	std::vector<std::string> seglistAux;
+
+	std::ifstream fileMove;
+	fileMove.open(filename);
+	if (!fileMove.is_open())
+	{
+		return false;
+	}
+
+	//std::getline(fileConf, line);
+	bool resultant = false;
+	std::vector<int> vecIDs;
+	std::vector<int> vecPos;
+
+
+	while (std::getline(fileMove, line, '\n')) {
+		seglist = split(line, '|');
+		for (int i = 0; i < seglist.size(); i++) {
+			seglistAux = split(seglist[i], '=');
+			vecIDs.push_back(std::stoi(seglistAux[0]));
+			vecPos.push_back(std::stoi(seglistAux[1]));
+		}
+
+		bool aux = false;
+		aux = moveMotors2(vecIDs, vecPos, fileWrite);
+		//writeFile(fileWrite);
+		//} while (aux);
+
+		vecIDs.clear();
+		vecPos.clear();
+
+	}
+
+	fileMove.close();
+	return true;
+}
+
 

@@ -18,6 +18,7 @@
 
 #define TIME_SLEEP						100			//100 MS
 #define THRESHOLD						15			//Error of position maximum.
+#define INTERVAL_THRESHOLD				75  		//Parts Interval of move
 
 // Protocol version Dynamixel
 #define PROTOCOL_VERSION                2.0         // See which protocol version is used in the Dynamixel
@@ -43,11 +44,15 @@ class Robot
 		Robot(std::string);
 
 		bool moveMotors(std::vector<int>, std::vector<int>);
+		bool moveMotors2(std::vector<int>, std::vector<int>, std::string);
 		bool readFileMove(std::string);
+		bool readFileMove2(std::string);
 		bool writeFile(std::string);
 
 	private:
 		std::vector<std::string> split(const std::string& s, char delimiter);
 		bool readFileConfig(std::string filename);
+		std::vector<int> splitIntervals(int ini, int end);
+
 };
 
